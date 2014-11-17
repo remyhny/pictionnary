@@ -1,0 +1,40 @@
+﻿<html ng-app="rooms">
+<head>
+    <title>pictionnary</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="libs/angular.js"></script>
+    <script type="text/javascript" src="libs/ngRoute.js"></script>
+    <script type="text/javascript" src="libs/colorPicker/jscolor.js"></script>
+    <script type="text/javascript" src="js/room.js"></script>
+    <link rel="stylesheet" type="text/css" href="games.css">
+</head>
+<body ng-controller="roomCtrl">
+    <div class="mainWrapper">
+        <div class="container">
+           <div canvas></div>
+        </div>
+
+        <div class="listMenu">
+            <div class="listJoueur">
+                <div ng-repeat="user in lstUsers">
+                    {{user.name}}
+                </div>
+
+            </div>
+            <div class="Chat">
+                <div id="textChat" class="textChat">
+                    <div ng-repeat="msg in messages track by $index">
+                        {{msg}}
+                    </div>
+                </div>
+                <input class="inputChat" ng-model="message" ng-keypress="keyPress($event)">
+
+                </input>
+
+                <div class="enterChat" ng-click="sendMessage()">E</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

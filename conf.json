@@ -1,0 +1,20 @@
+{
+	"http" :  {
+		"index": "index.html",
+		"port": 5555,
+		"www": "./www/",
+		"mime": {
+		"css" : "text/css",
+		"gif" : "image/gif",
+		"jpg" : "image/jpeg",
+		"jpeg": "image/jpeg",
+		"js"  : "application/javascript",
+		"ttf"  : "font/ttf",
+		"png" : "image/png",
+		"html" : "text/html"
+		},
+		"error" : {
+			"404" : "404.html"
+		}
+	}
+}

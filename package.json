@@ -1,0 +1,13 @@
+{
+  "name": "Pictionnary",
+  "description": "Pictionnary",
+  "version": "0.0.1",
+  "repository": "git://github.com/remyhny/pictionnary",
+  "main": "index",
+  "engines": {
+    "node": ">=0.10.30"
+  },
+  "dependencies": {
+    "socket.io": "^1.x"
+  }
+}
