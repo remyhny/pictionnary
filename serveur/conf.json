@@ -1,8 +1,8 @@
 {
 	"http" :  {
-		"index": "index.html",
+		"index": "/index.html",
 		"port": 5555,
-		"www": "./www/",
+		"www": "../pages",
 		"mime": {
 		"css" : "text/css",
 		"gif" : "image/gif",
@@ -14,7 +14,7 @@
 		"html" : "text/html"
 		},
 		"error" : {
-			"404" : "404.html"
+			"404" : "../404.html"
 		}
 	}
 }

@@ -1,0 +1,25 @@
+<div>
+    <div class="mainWrapper">
+        <div class="container">
+            <div class="title">Bonjour à Tous</div>
+        </div>
+
+        <div class="listMenu">
+            <input class="input" ng-model="name" placeholder="nom joueur"></input>
+
+            <div ng-click="isCreateGame = true" class="button">Creation partie</div>
+            <div ng-show="isCreateGame">
+                <input class="input" ng-model="game.name" placeholder="nom partie"></input>
+                <input class="input" ng-model="game.theme" placeholder="theme"></input>
+
+                <div ng-click="createGame()" class="button">Creer</div>
+
+            </div>
+            <div class="error" ng-show="error">pas de nom de joueur</div>
+
+            <div ng-show="games" ng-repeat="game in games" class="button" ng-click="enterGame(game.index)">Game :
+                {{game.name}} Theme : {{game.theme}}
+            </div>
+        </div>
+    </div>
+</div>

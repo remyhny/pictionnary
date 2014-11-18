@@ -14,7 +14,6 @@ var io = require('socket.io').listen(httpServer, { origins: '*:*' });
 function onRequest(request, response) {
     var pathname = url.parse(request.url).pathname;
     var extension = pathname.split('.').pop();
-
     if (pathname == '/') pathname = conf.http.index;
     response.writeHead(200, {
         'Content-Type': conf.http.mime[extension],
