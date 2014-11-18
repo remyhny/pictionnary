@@ -1,30 +1,32 @@
-﻿<div>
-    <div class="mainWrapper">
-        <div class="container">
-           <div canvas></div>
-        </div>
+﻿<div class="col-md-8 fill main">
+    <div canvas></div>
+</div>
 
-        <div class="listMenu">
-            <div class="listJoueur">
-                <div ng-repeat="user in lstUsers">
+<div class="col-md-4 fill list">
+    <div class="colList">
+        <legend>Liste des joueurs :</legend>
+        <div class="listUsers">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="user in lstUsers">
                     {{user.name}}
-                </div>
-
-            </div>
-            <div class="Chat">
-                <div id="textChat" class="textChat">
-                    <div ng-repeat="msg in messages track by $index">
-                        {{msg}}
-                    </div>
-                </div>
-                <input class="inputChat" ng-model="message" ng-keypress="keyPress($event)">
-
-                </input>
-
-                <div class="enterChat" ng-click="sendMessage()">E</div>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="colList">
+        <legend>Chat :</legend>
+        <div id="textChat" class="textChat">
+            <div ng-repeat="msg in messages track by $index">
+                {{msg}}
+            </div>
+        </div>
 
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="message" ng-keypress="keyPress($event)">
+              <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="sendMessage()" type="button">Go!</button>
+              </span>
+        </div>
+    </div>
 </div>
 

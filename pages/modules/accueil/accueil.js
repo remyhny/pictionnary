@@ -2,7 +2,7 @@
 
 games
     .controller('accueilCtrl', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location) {
-        var socket = io.connect('http://localhost/index', {port: 5555});
+        var socket = io.connect('http://82.231.46.169/index', {port: 5555});
         socket.on('listGames', function(data) {
             if (data) {
                 $scope.games = data;
@@ -13,6 +13,7 @@ games
         $scope.createGame = function() {
             socket.emit('createGame', $scope.game);
             $scope.game = null;
+            $scope.isCreateGame = false;
         };
 
         $scope.enterGame = function(index) {

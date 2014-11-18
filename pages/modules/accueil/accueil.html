@@ -1,25 +1,38 @@
-<div>
-    <div class="mainWrapper">
-        <div class="container">
-            <div class="title">Bonjour à Tous</div>
-        </div>
+<div class="col-md-8 fill main">
+    <h1 class="text-center">Bienvenue sur le pictionnary</h1>
+</div>
 
-        <div class="listMenu">
-            <input class="input" ng-model="name" placeholder="nom joueur"></input>
+<div class="col-md-4 fill list">
+    <input class="form-control" ng-model="name" placeholder="nom joueur">
 
-            <div ng-click="isCreateGame = true" class="button">Creation partie</div>
-            <div ng-show="isCreateGame">
-                <input class="input" ng-model="game.name" placeholder="nom partie"></input>
-                <input class="input" ng-model="game.theme" placeholder="theme"></input>
+    <div ng-show="error" class="error">pas de nom de joueur</div>
 
-                <div ng-click="createGame()" class="button">Creer</div>
-
-            </div>
-            <div class="error" ng-show="error">pas de nom de joueur</div>
-
-            <div ng-show="games" ng-repeat="game in games" class="button" ng-click="enterGame(game.index)">Game :
-                {{game.name}} Theme : {{game.theme}}
-            </div>
-        </div>
+    <div class="wrapperList">
+        <form>
+            <fieldset>
+                <legend>Liste des parties :</legend>
+                <ul class="list-group">
+                    <li class="list-group-item enterGame" ng-show="games" ng-repeat="game in games"
+                        ng-click="enterGame(game.index)">Game :
+                        {{game.name}} Theme : {{game.theme}}
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
     </div>
+
+    <div class="wrapperList" ng-show="isCreateGame">
+        <form>
+            <fieldset>
+                <legend>Création d'une partie :</legend>
+                <input class="form-control" ng-model="game.name" placeholder="nom partie">
+                <input class="form-control" ng-model="game.theme" placeholder="theme">
+
+                <button class="btn btn-success button" ng-click="createGame()">Creer</button>
+                <button class="btn btn-danger button" ng-click="isCreateGame = false">Fermer</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <button ng-click="isCreateGame = true" class="btn btn-default botButton">Creation partie</button>
 </div>

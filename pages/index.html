@@ -1,10 +1,18 @@
-<html ng-app="pictionnary">
+<!DOCTYPE html>
+<html ng-app="pictionnary" lang="fr">
     <head>
         <title>pictionnary</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/games.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     </head>
     <body>
-        <div ng-view></div>
+        <div class="container-fluid fill" >
+            <div class="row fill" ng-view></div>
+        </div>
+
+
         <script src="/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="libs/angular.js"></script>
         <script type="text/javascript" src="libs/colorPicker/jscolor.js"></script>

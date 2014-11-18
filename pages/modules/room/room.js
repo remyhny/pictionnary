@@ -2,7 +2,7 @@
 
 rooms
     .controller('roomCtrl', ['$scope', '$routeParams', '$location', '$timeout', function($scope, $routeParams, $location, $timeout) {
-        var socket = io.connect('http://localhost/room', {port: 5555});
+        var socket = io.connect('http://82.231.46.169/room', {port: 5555});
         var textChat = document.getElementById("textChat");
 
         if (sessionStorage.getItem('name') && sessionStorage.getItem('game')) {
@@ -78,7 +78,7 @@ rooms
                 var color = "#000";
                 var canvas, ctx = null;
 
-                var socket = io.connect('http://localhost/canvas', {port: 5555});
+                var socket = io.connect('http://82.231.46.169/canvas', {port: 5555});
 
                 $scope.$on('receiveDraw', function(event, position) {
                     canvasObj.socketDraw(position);

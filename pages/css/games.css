@@ -1,86 +1,61 @@
-﻿body {
-    margin: 0px;
-    padding: 0px;
-}
-
-.mainWrapper {
-    width: 100%;
-}
-
-.canvas {
-    margin : auto;
-    border : 1px solid black;
-    background-color:#fff;
-}
-
-
-.container {
-    float: left;
-    background-color: #1abc9c;
+﻿html, body {
     height: 100%;
-    width: 80%;
 }
 
-.listMenu {
-    float: left;
+.fill {
+    height: 100%;
+    min-height: 100%;
+}
+
+.main {
+    background-color: #95a5a6;
+}
+
+.list {
     background-color: #bdc3c7;
-    height: 100%;
-    width: 20%;
-}
-
-.title {
-    text-align: center;
-    font-size: 70px;
 }
 
 .button {
-    background-color: #2980b9;
-    width: 295px;
-    padding: 6px 10px 6px 10px;
+    margin-top: 10px;
+}
+
+.botButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.wrapperList {
+    margin-top: 10px;
+}
+
+.enterGame{
     cursor: pointer;
-    margin-top: 15px;
-    margin-left: 12px;
-    text-align: center;
+    background-color: #3498db;
 }
 
-.input {
-    margin: auto;
-    margin-top: 8px;
-    margin-left: 12px;
-    width: 150px;
+.error{
+    color : red;
 }
 
-.error {
-    color: red;
-    margin-left: 12px;
-}
-
-.listJoueur {
+.colList {
     height: 50%;
 }
 
-.Chat {
-    height: 50%;
+.listUsers {
+    overflow : auto;
+    height: 80%;
 }
 
 .textChat {
-    height: 94%;
-    width: 100%;
-    background-color: white;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 69%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding-left: 5px;
+    border-radius: 5px;
+    overflow: auto;
 }
 
-.inputChat {
-    height: 6%;
-    width: 90%;
-    float: left;
-}
-
-.enterChat {
-    float: left;
-    width: 10%;
-    height: 6%;
-    text-align: center;
-    cursor: pointer;
+.canvas {
+    background-color: #fff;
 }
