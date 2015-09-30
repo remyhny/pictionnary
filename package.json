@@ -5,7 +5,7 @@
   "repository": "git://github.com/remyhny/pictionnary",
   "main": "index",
   "engines": {
-    "node": ">=0.10.30"
+    "node": ">=0.12.5"
   },
   "dependencies": {
     "socket.io": "^1.x"
